@@ -27,7 +27,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             ),
             height: size.height * 0.2 - 27,
             decoration: BoxDecoration(
-              color: kPrimaryColor,
+              gradient: orangetoredGradient,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(36),
                 bottomRight: Radius.circular(36),
@@ -36,7 +36,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Text(
-                  'Hi Uishopy!',
+                  'Welcomre to Boozly!',
                   style: Theme.of(context).textTheme.headline5.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),

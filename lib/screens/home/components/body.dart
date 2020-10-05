@@ -1,10 +1,9 @@
+import 'package:boozly/screens/home/components/featured.dart';
+import 'package:boozly/screens/home/components/header_with_seachbox.dart';
+import 'package:boozly/screens/home/components/recomend.dart';
+import 'package:boozly/screens/home/components/title_with_more_bbtn.dart';
 import 'package:flutter/material.dart';
 import 'package:boozly/constants.dart';
-
-import 'featurred_plants.dart';
-import 'header_with_seachbox.dart';
-import 'recomend_plants.dart';
-import 'title_with_more_bbtn.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -17,10 +16,10 @@ class Body extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           HeaderWithSearchBox(size: size),
-          TitleWithMoreBtn(title: "Recomended", press: () {}),
-          RecomendsPlants(),
-          TitleWithMoreBtn(title: "Featured Plants", press: () {}),
-          FeaturedPlants(),
+          TitleWithMoreBtn(title: "Recommended", press: () {}),
+          RecomendsDrinks(),
+          TitleWithMoreBtn(title: "Featured by Boozly", press: () {}),
+          FeaturedDrinks(),
           SizedBox(height: kDefaultPadding),
         ],
       ),

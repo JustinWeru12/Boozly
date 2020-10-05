@@ -3,8 +3,8 @@ import 'package:boozly/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
 
-class RecomendsPlants extends StatelessWidget {
-  const RecomendsPlants({
+class RecomendsDrinks extends StatelessWidget {
+  const RecomendsDrinks({
     Key key,
   }) : super(key: key);
 
@@ -15,39 +15,61 @@ class RecomendsPlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "assets/images/image_1.png",
-            title: "Samantha",
-            country: "Russia",
+            image: "assets/images/jd.jpg",
+            title: "Jack Daniels",
+            country: "America",
             price: 440,
             press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsScreen(),
+                  builder: (context) => DetailsScreen(
+                    image: "assets/images/jd.jpg",
+            title: "Jack Daniels",
+            country: "America",
+            price: 440,
+                  ),
                 ),
               );
             },
           ),
           RecomendPlantCard(
-            image: "assets/images/image_2.png",
-            title: "Angelica",
-            country: "Russia",
+            image: "assets/images/bacardi.jpg",
+            title: "Bacardi",
+            country: "America",
             price: 440,
             press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsScreen(),
+                  builder: (context) => DetailsScreen(
+                    image: "assets/images/bacardi.jpg",
+                    title: "Bacardi",
+                    country: "America",
+                    price: 440,
+                  ),
                 ),
               );
             },
           ),
           RecomendPlantCard(
-            image: "assets/images/image_3.png",
-            title: "Samantha",
-            country: "Russia",
+            image: "assets/images/jose.jpg",
+            title: "Jose Cuervo",
+            country: "Mexico",
             price: 440,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(
+                    image: "assets/images/jose.jpg",
+                    title: "Jose Cuervo",
+                    country: "Mexico",
+                    price: 440,
+                  ),
+                ),
+              );
+            },
           ),
         ],
       ),
@@ -72,19 +94,24 @@ class RecomendPlantCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
-      margin: EdgeInsets.only(
-        left: kDefaultPadding,
-        top: kDefaultPadding / 2,
-        bottom: kDefaultPadding * 2.5,
-      ),
-      width: size.width * 0.4,
-      child: Column(
-        children: <Widget>[
-          Image.asset(image),
-          GestureDetector(
-            onTap: press,
-            child: Container(
+    return GestureDetector(
+      onTap: press,
+      child: Container(
+        margin: EdgeInsets.only(
+          left: kDefaultPadding,
+          top: kDefaultPadding / 2,
+          bottom: kDefaultPadding * 2.5,
+        ),
+        width: size.width * 0.4,
+        child: Column(
+          children: <Widget>[
+            ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                ),
+                child: Image.asset(image)),
+            Container(
               padding: EdgeInsets.all(kDefaultPadding / 2),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -127,9 +154,9 @@ class RecomendPlantCard extends StatelessWidget {
                   )
                 ],
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }

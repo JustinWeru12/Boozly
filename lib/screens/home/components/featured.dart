@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 
-class FeaturedPlants extends StatelessWidget {
-  const FeaturedPlants({
+class FeaturedDrinks extends StatelessWidget {
+  const FeaturedDrinks({
     Key key,
   }) : super(key: key);
 
@@ -14,11 +14,11 @@ class FeaturedPlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           FeaturePlantCard(
-            image: "assets/images/bottom_img_1.png",
+            image: "assets/images/bg.png",
             press: () {},
           ),
           FeaturePlantCard(
-            image: "assets/images/bottom_img_2.png",
+            image: "assets/images/bg_2.jpg",
             press: () {},
           ),
         ],
