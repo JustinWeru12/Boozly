@@ -1,6 +1,12 @@
 # boozly
 
-A new Flutter project.
+A new Flutter project for Alcohol sales.
+
+>UI design
+
+|Splash Screen|Home Page|Specific item page|
+|---|---|---|
+|<img src="https://github.com/JustinWeru12/Boozly/blob/master/assets/readme/1.png" width="400px" height="auto">|<img src="https://github.com/JustinWeru12/Boozly/blob/master/assets/readme/2.png" width="400px" height="auto">|<img src="https://github.com/JustinWeru12/Boozly/blob/master/assets/readme/3.png" width="400px" height="auto">|
 
 ## Getting Started
 
