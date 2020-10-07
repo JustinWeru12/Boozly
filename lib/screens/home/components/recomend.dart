@@ -14,7 +14,7 @@ class RecomendsDrinks extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
-          RecomendPlantCard(
+          RecomendDrinkCard(
             image: "assets/images/jd.jpg",
             title: "Jack Daniels",
             country: "America",
@@ -25,15 +25,15 @@ class RecomendsDrinks extends StatelessWidget {
                 MaterialPageRoute(
                   builder: (context) => DetailsScreen(
                     image: "assets/images/jd.jpg",
-            title: "Jack Daniels",
-            country: "America",
-            price: 440,
+                    title: "Jack Daniels",
+                    country: "America",
+                    price: 440,
                   ),
                 ),
               );
             },
           ),
-          RecomendPlantCard(
+          RecomendDrinkCard(
             image: "assets/images/bacardi.jpg",
             title: "Bacardi",
             country: "America",
@@ -45,14 +45,14 @@ class RecomendsDrinks extends StatelessWidget {
                   builder: (context) => DetailsScreen(
                     image: "assets/images/bacardi.jpg",
                     title: "Bacardi",
-                    country: "America",
+                    country: "Puerto Rico",
                     price: 440,
                   ),
                 ),
               );
             },
           ),
-          RecomendPlantCard(
+          RecomendDrinkCard(
             image: "assets/images/jose.jpg",
             title: "Jose Cuervo",
             country: "Mexico",
@@ -71,14 +71,52 @@ class RecomendsDrinks extends StatelessWidget {
               );
             },
           ),
+          RecomendDrinkCard(
+            image: "assets/images/ballantines.jpg",
+            title: "Ballantine's",
+            country: "Scotland",
+            price: 400,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(
+                    image: "assets/images/ballantines.jpg",
+                    title: "Ballantine's",
+                    country: "Scotland",
+                    price: 400,
+                  ),
+                ),
+              );
+            },
+          ),
+          RecomendDrinkCard(
+            image: "assets/images/talisker.jpg",
+            title: "Talisker",
+            country: "Scotland",
+            price: 400,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(
+                    image: "assets/images/talisker.jpg",
+                    title: "Talisker",
+                    country: "Scotland",
+                    price: 400,
+                  ),
+                ),
+              );
+            },
+          ),
         ],
       ),
     );
   }
 }
 
-class RecomendPlantCard extends StatelessWidget {
-  const RecomendPlantCard({
+class RecomendDrinkCard extends StatelessWidget {
+  const RecomendDrinkCard({
     Key key,
     this.image,
     this.title,

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Boozly',
       theme: ThemeData(
         scaffoldBackgroundColor: kBackgroundColor,
-        primaryColor: kPrimaryColor,
+        primaryColor: Colors.deepPurple[900],
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
